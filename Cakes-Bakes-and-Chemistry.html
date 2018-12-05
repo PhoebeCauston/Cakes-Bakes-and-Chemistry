@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Index/home.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="./Cakes-Bakes-and-Chemistry_files/css" rel="stylesheet">
+  <link href="./Cakes-Bakes-and-Chemistry_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Cakes-Bakes-and-Chemistry_files/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./Cakes-Bakes-and-Chemistry_files/homestyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cakes-Bakes-and-Chemistry</title>
+</head>
+
+
+  <body><header>
+  <h1>Cakes, Bakes, and Chemistry</h1>
+
+  <div class="nav">
+      <a href="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Index/home.html"><strong>Home</strong></a>
+      <a href="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Recipes/recipes.html">Recipes</a>
+      <a href="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Chemistry/chemistry.html">Chemistry</a>
+      <a href="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Blog/blog.html">Blog</a>
+      <a href="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Contact/contact.html">Contact</a><br><br>
+      <form class="searchbar" action="https://phoebecauston.github.io/Cakes-Bakes-and-Chemistry/Cakes_Bakes_Chemistry/Index/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+</form>
+  </div>
+<header>
+<br>
+
+  <h2 id="introduction"><strong>Welcome to Cakes, Bakes, and Chemistry!</strong></h2><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <div class="numbertext">1 / 5</div>
+  <img src="./Cakes-Bakes-and-Chemistry_files/28e4ba8aa815e6cb6358933fd1fe6a85.jpg" style="width:100%">
+  <div class="text">Cakes</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 5</div>
+  <img src="./Cakes-Bakes-and-Chemistry_files/78e06bf64042d8bbeadcf2793dc42c01.jpg" style="width:100%">
+  <div class="text">Cookies</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 5</div>
+  <img src="./Cakes-Bakes-and-Chemistry_files/f5db60b719f2bc1fd4ee3e48155de970.jpg" style="width:100%">
+  <div class="text">Cupcakes</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">4 / 5</div>
+  <img src="./Cakes-Bakes-and-Chemistry_files/498625993afdb7272c30d83aa8921dad.jpg" style="width:100%">
+  <div class="text">Muffins</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 5</div>
+  <img src="./Cakes-Bakes-and-Chemistry_files/6fcd858149eed7d27043315e8de92cde.jpg" style="width:100%">
+  <div class="text">Traybakes</div>
+</div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<div class="Recipes">
+<button class="accordion"><h2>Recipes</h2></button>
+<div class="panel">
+  <h3>Cakes</h3><br>
+  <h3>Cookies</h3><br>
+  <h3>Cupcakes</h3><br>
+  <h3>Muffins</h3><br>
+  <h3>Traybakes</h3><br>
+</div><br>
+</div>
+
+<div class="Chemistry">
+ <h2>Chemistry</h2><br>
+ <br>
+</div>
+
+<div class="Blog">
+ <h2>Blog - Latest Post</h2><br>
+ <br>
+</div>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(SlideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block"){
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+     });
+    }
+
+</script>
+
+
+
+</header></header><span style="border-radius: 3px !important; text-indent: 20px !important; width: auto !important; padding: 0px 4px 0px 0px !important; text-align: center !important; font: bold 11px/20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) 3px 50% / 14px 14px no-repeat rgb(189, 8, 28) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: block; cursor: pointer !important; border: none !important; -webkit-font-smoothing: antialiased !important; top: 367px; left: 142px;">Save</span><span style="border-radius: 12px; width: 24px !important; height: 24px !important; background: url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) 50% 50% / 14px 14px no-repeat rgba(0, 0, 0, 0.4) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: block; cursor: pointer !important; border: none !important; top: 365px; left: 1100px;"></span></body></html>
