@@ -1,12 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
+  padding: 0px;
+  background-color: #E6FCFF;
 }
 h1 {
   font-family: Pacifico;
   text-align: center;
   font-size: 75px;
-  padding: 20px 0 0 0;
-  margin-bottom: 5px;
+  padding: 0px 0 5px 0;
+  margin-bottom: 0px;
   color: #4C4C4C;
 }
 header {
@@ -14,46 +21,204 @@ header {
   background-size: cover;
 }
 
-ul.nav {
-    display: flex;
+.nav {
+    background-color: rgba(230,252,255,0.95);
+    overflow: hidden;
+
+    display: center;
     justify-content: space-around;
     list-style-type: none;
     margin: auto;
     padding: 1em 0;
-    overflow: hidden;
-    background-color: #E6FCFF;
-    font-size: 18px;
-    /*position: fixed;
+
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: sticky;
+    width: 100%;
     top: 0;
-    width: 100%;*/
-    width: 200px;
+    text-align: center;
 }
 
-li {
-    float: left;
-    /*flex-grow: 1;*/
-}
-
-li a {
+.nav a {
     color: #4c4c4c;
     text-align: center;
-    padding: 1em 2em;
-    margin: 0 1em;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 28px;
     font-family: Amatic SC;
     vertical-align: middle;
-    width: 1000px;
+    cursor: pointer;
+    display: center;
 }
 
-li a:hover {
+.nav a:hover {
     background-color: #4C4C4C;
     color: white;
 }
 
-.active {
-  background-color:#4C4C4C;
-  color: white;
+.nav a.active {
+      background-color:#4C4C4C;
+      color: white;
+      font-family: Pacifico;
+    }
+
+form.searchbar input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: none;
+      float: none;
+      width: 300px;
+      background: white;
+      color: #4c4c4c;
+      font-family: Amatic SC;
+      outline: none;
+    }
+
+h2 {
+  font-family: Amatic SC;
 }
+
+h3 {
+  font-family: Amatic SC;
+}
+
+#introduction {
+  font-family: Amatic SC;
+  color: #4c4c4c;
+  text-align: center;
+  font-size: 45px;
+}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: ;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  background-color: white;
+  color: #white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Amatic SC;
+}
+
+
+.numbertext {
+  color: #white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: Amatic SC;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4c4c4c;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.accordion {
+    background-color: #E6feff;
+    color: #4c4c4c;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #4c4c4c;
+    color: white;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: E6feff;
+    color: 4c4c4c;
+    overflow: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 
 /* for phone/tablets */
 @media (max-width: 500px) {

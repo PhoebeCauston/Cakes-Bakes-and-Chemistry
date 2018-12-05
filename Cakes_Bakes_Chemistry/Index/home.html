@@ -1,8 +1,12 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico" rel="stylesheet">
+  <link href='css/bootstrap.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="homestyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Cakes-Bakes-and-Chemistry</title>
 </head>
 
@@ -10,22 +14,142 @@
   <header>
   <h1>Cakes, Bakes, and Chemistry</h1>
 
-  <ul class='nav'>
-      <li><a href="#Home">Home</a></li>
-      <li><a href="#Recipes">Recipes</a></li>
-      <li><a href="#Chemistry">Chemistry</a></li>
-      <li><a href="#Blog">Blog</a></li>
-      <li><a href="#Contact">Contact</a></li>
-  </ul>
+  <div class='nav'>
+      <a href="home.html"><strong>Home</strong></a>
+      <a href="../Recipes/recipes.html">Recipes</a>
+      <a href="../Chemistry/chemistry.html">Chemistry</a>
+      <a href="../Blog/blog.html">Blog</a>
+      <a href="../Contact/contact.html">Contact</a><br><br>
+      <form class="searchbar" action="action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+</form>
+  </div>
 <header>
-
+<br>
 <body>
+  <h2 id="introduction"><strong>Welcome to Cakes, Bakes, and Chemistry!</strong></h2><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <div class="numbertext">1 / 5</div>
+  <img src="https://i.pinimg.com/originals/28/e4/ba/28e4ba8aa815e6cb6358933fd1fe6a85.jpg" style="width:100%">
+  <div class="text">Cakes</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 5</div>
+  <img src="https://i.pinimg.com/originals/78/e0/6b/78e06bf64042d8bbeadcf2793dc42c01.jpg" style="width:100%">
+  <div class="text">Cookies</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://i.pinimg.com/originals/f5/db/60/f5db60b719f2bc1fd4ee3e48155de970.jpg" style="width:100%">
+  <div class="text">Cupcakes</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">4 / 5</div>
+  <img src="https://i.pinimg.com/originals/49/86/25/498625993afdb7272c30d83aa8921dad.jpg" style="width:100%">
+  <div class="text">Muffins</div>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 5</div>
+  <img src="https://i.pinimg.com/originals/6f/cd/85/6fcd858149eed7d27043315e8de92cde.jpg" style="width:100%">
+  <div class="text">Traybakes</div>
+</div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
 <div class="Recipes">
+<button class="accordion"><h2>Recipes</h2></button>
+<div class="panel">
+  <h3>Cakes</h3><br>
+  <h3>Cookies</h3><br>
+  <h3>Cupcakes</h3><br>
+  <h3>Muffins</h3><br>
+  <h3>Traybakes</h3><br>
+</div><br>
+</div>
 
 <div class="Chemistry">
+ <h2>Chemistry</h2><br>
+ <br>
+</div>
 
 <div class="Blog">
+ <h2>Blog - Latest Post</h2><br>
+ <br>
+</div>
 
+
+
+<script>
+var slideIndex = 1;
+showSlides(SlideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block"){
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+     });
+    }
+
+</script>
 
 </body>
 </html>
